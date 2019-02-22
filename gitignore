@@ -1,0 +1,6 @@
+# ignore all . files
+.*
+
+# ignore environment files
+env.*
+
