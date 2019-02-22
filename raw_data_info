@@ -6,7 +6,6 @@ Original data fromat is `csv`
 > encounter_dx : this data is containing visit code of the patients </br>
 
 
-
 **medication_orders** </br>
  |-- Provider_Org: string (nullable = true) </br>
  |-- Member_ID: string (nullable = true) </br>
@@ -71,19 +70,4 @@ Original data fromat is `csv`
 |-- description: string (nullable = true)
 |-- severity: string (nullable = true)
 |-- Encounter_ID: string (nullable = true)
- |-- Facility_Name: string (nullable = true)</br>
- |-- Provider_Name: string (nullable = true)</br>
- |-- Specialty: string (nullable = true)</br>
- |-- Clinic_Type: string (nullable = true)</br>
- |-- lab_orders_count: string (nullable = true)</br>
- |-- lab_results_count: string (nullable = true)</br>
- |-- medication_orders_count: string (nullable = true)</br>
- |-- medication_fulfillment_count: string (nullable = true)</br>
- |-- vital_sign_count: string (nullable = true)</br>
- |-- therapy_orders_count: string (nullable = true)</br>
- |-- therapy_actions_count: string (nullable = true)</br>
- |-- immunization_count: string (nullable = true)</br>
- |-- Has_Appt: string (nullable = true)</br>
- |-- SOAP_Note: string (nullable = true)</br>
- |-- consult_ordered: string (nullable = true)</br>
- |-- Disposition: string (nullable = true)</br>
+ 
