@@ -50,33 +50,33 @@ Original data fromat is `csv`
  |-- Encounter_ID: string (nullable = true)</br>
  
 **encounter** </br>
-Provider_Org
-Encounter_ID
-Member_ID
-Provider_ID
-Provider_NPI
-Clinic_ID
-Encounter_DateTime
-Encounter_Description
-CC
-Episode_ID
-Patient_DOB
-Patient_Gender
-Facility_Name
-Provider_Name
-Specialty
-Clinic_Type
-lab_orders_count
-lab_results_count
-medication_orders_count
-medication_fulfillment_count
-vital_sign_count
-therapy_orders_count
-therapy_actions_count
-immunization_count
-Has_Appt
-SOAP_Note
-consult_ordered	Disposition
+Provider_Org </br>
+Encounter_ID </br>
+Member_ID </br>
+Provider_ID </br>
+Provider_NPI </br>
+Clinic_ID </br>
+Encounter_DateTime </br>
+Encounter_Description </br>
+CC </br>
+Episode_ID </br>
+Patient_DOB </br>
+Patient_Gender </br>
+Facility_Name </br>
+Provider_Name </br>
+Specialty </br>
+Clinic_Type </br>
+lab_orders_count </br>
+lab_results_count </br>
+medication_orders_count </br>
+medication_fulfillment_count </br>
+vital_sign_count </br>
+therapy_orders_count </br>
+therapy_actions_count </br>
+immunization_count </br>
+Has_Appt </br>
+SOAP_Note </br>
+consult_ordered	Disposition </br>
 
 **encounter_dx** </br>
 |-- Provider_Org: string (nullable = true)</br>
