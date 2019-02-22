@@ -64,10 +64,9 @@ Original data fromat is `csv`
  |-- Patient_Gender: string (nullable = true)</br>
  
 **encounter_dx** </br>
-|-- Provider_Org: string (nullable = true)
-|-- code: string (nullable = true)
-|-- vocab: string (nullable = true)
-|-- description: string (nullable = true)
-|-- severity: string (nullable = true)
-|-- Encounter_ID: string (nullable = true)
- 
+|-- Provider_Org: string (nullable = true)</br>
+|-- code: string (nullable = true)</br>
+|-- vocab: string (nullable = true)</br>
+|-- description: string (nullable = true)</br>
+|-- severity: string (nullable = true)</br>
+|-- Encounter_ID: string (nullable = true)</br>
