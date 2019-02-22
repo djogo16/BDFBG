@@ -50,19 +50,34 @@ Original data fromat is `csv`
  |-- Encounter_ID: string (nullable = true)</br>
  
 **encounter** </br>
- |-- Provider_Org: string (nullable = true)</br>
- |-- Encounter_ID: string (nullable = true)</br>
- |-- Member_ID: string (nullable = true)</br>
- |-- Provider_ID: string (nullable = true)</br>
- |-- Provider_NPI: string (nullable = true)</br>
- |-- Clinic_ID: string (nullable = true)</br>
- |-- Encounter_DateTime: string (nullable = true)</br>
- |-- Encounter_Description: string (nullable = true)</br>
- |-- CC: string (nullable = true)</br>
- |-- Episode_ID: string (nullable = true)</br>
- |-- Patient_DOB: string (nullable = true)</br>
- |-- Patient_Gender: string (nullable = true)</br>
- 
+Provider_Org
+Encounter_ID
+Member_ID
+Provider_ID
+Provider_NPI
+Clinic_ID
+Encounter_DateTime
+Encounter_Description
+CC
+Episode_ID
+Patient_DOB
+Patient_Gender
+Facility_Name
+Provider_Name
+Specialty
+Clinic_Type
+lab_orders_count
+lab_results_count
+medication_orders_count
+medication_fulfillment_count
+vital_sign_count
+therapy_orders_count
+therapy_actions_count
+immunization_count
+Has_Appt
+SOAP_Note
+consult_ordered	Disposition
+
 **encounter_dx** </br>
 |-- Provider_Org: string (nullable = true)</br>
 |-- code: string (nullable = true)</br>
