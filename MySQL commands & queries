@@ -1,3 +1,17 @@
+/*make directory "med_data" in maria_dev*/
+mkdir med_data
+
+/*copy files from source folder on local to maria_dev*/
+scp -P 2222 encounter_dx_INPUT.csv maria_dev@127.0.0.1:/home/maria_dev/med_data
+scp -P 2222 encounter_INPUT.csv maria_dev@127.0.0.1:/home/maria_dev/med_data
+scp -P 2222 lab_results_INPUT.csv maria_dev@127.0.0.1:/home/maria_dev/med_data
+scp -P 2222 medication_orders_INPUT.csv maria_dev@127.0.0.1:/home/maria_dev/med_data
+
+
+Create database med_data;
+
+Use med_data;
+
 CREATE TABLE encounter_dx(
 Provider_Org varchar(50) DEFAULT NULL,
 code varchar(50) DEFAULT NULL,
