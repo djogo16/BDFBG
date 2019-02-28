@@ -1,0 +1,116 @@
+//create med_data table
+CREATE DATABASE [IF NOT EXISTS] med_data;
+
+//create encounter table
+CREATE TABLE IF NOT EXISTS encounter ( Provider_Org String,
+Encounter_ID String,
+Member_ID String,
+Provider_ID String,
+Provider_NPI String,
+Clinic_ID String,	
+Encounter_DateTime String,
+Encounter_Description String,
+CC String,
+Episode_ID String,
+Patient_DOB String,
+Patient_Gender String,
+Facility_Name String,
+Provider_Name String,
+Specialty String,
+Clinic_Type String,
+lab_orders_count String,
+lab_results_count String,
+medication_orders_count String,
+medication_fulfillment_count String,
+vital_sign_count String,
+therapy_orders_count String,
+therapy_actions_count String,
+immunization_count String,
+Has_Appt String,
+SOAP_Note String,
+consult_ordered String,
+Disposition String)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ","
+LINES TERMINATED BY "\n"
+STORED AS TEXTFILE;
+
+//load data into encounter
+LOAD DATA INPATH '/user/maria_dev/encounter/part-m-00000' INTO TABLE encounter;
+
+//create table encounter_dx
+CREATE TABLE IF NOT EXISTS encounter_dx (
+Provider_Org String,
+code String,
+vocab String,
+description String,
+severity String,
+Encounter_ID String)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ","
+LINES TERMINATED BY "\n"
+STORED AS TEXTFILE;
+
+//load data into encounter_dx
+LOAD DATA INPATH '/user/maria_dev/encounter_dx/part-m-00000' INTO TABLE encounter;
+
+//create table lab
+CREATE TABLE IF NOT EXISTS lab (
+Provider_Org String,
+Member_ID String,
+Date_Collected String,
+Test_ID String,
+Specialty String,
+Panel String,
+Test_LOINC String,
+Test_Name String,
+Date_Resulted String,
+Specimen String,
+Result_LOINC String,
+Result_Name String,
+Result_Status String,
+Result_Description String,
+Numeric_Result String,
+Units String,
+Abnormal_Value String,
+Reference_Range String,
+Order_ID String,
+Provider_ID String,
+Encounter_ID String)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ","
+LINES TERMINATED BY "\n"
+STORED AS TEXTFILE;
+
+//load data into lab
+LOAD DATA INPATH '/user/maria_dev/lab/part-m-00000' INTO TABLE encounter;
+sqoop import --connect jdbc:mysql://localhost/med_data --username root --password hadoop --table lab --driver com.mysql.jdbc.Driver -m1
+
+
+//create table encounter_dx
+CREATE TABLE IF NOT EXISTS medication (
+Provider_Org String,
+Member_ID String,
+Last_Filled_Date String,
+Drug_Name String,
+Drug_NDC String,
+Status String,
+Sig String,
+Route String,
+Dose String,
+Units String,
+Order_ID String,
+Order_Date String,
+Qty_Ordered DECIMAL,
+Refills INT,
+Order_Provider_ID String,
+Order_Provider_Name String,
+Medication_Type String,
+Encounter_ID String)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ","
+LINES TERMINATED BY "\n"
+STORED AS TEXTFILE;
+
+//load data into medication
+LOAD DATA INPATH '/user/maria_dev/medication/part-m-00000' INTO TABLE encounter;
